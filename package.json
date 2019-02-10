@@ -16,7 +16,7 @@
   "author": "Jim Cummins <jimthedev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "conventional-commit-types": "^2.0.0",
+    "conventional-commit-types": "git://github.com/axilleasiv/conventional-commit-types.git#version",
     "lodash.map": "^4.5.1",
     "longest": "^1.0.1",
     "right-pad": "^1.0.1",
@@ -27,7 +27,7 @@
     "semantic-release": "^6.3.2"
   },
   "config": {
-    "commitizen" : {
+    "commitizen": {
       "path": "./index.js"
     }
   }
