@@ -17,11 +17,13 @@ var filter = function(array) {
 module.exports = function (options) {
 
   var types = options.types;
-
-  var length = longest(Object.keys(types)).length + 1;
+  var addEmoji = function (type) {
+    return type.emoji ? type.emoji + ' ' : '';
+  };
+  var length = longest(Object.keys(types)).length + 6;
   var choices = map(types, function (type, key) {
     return {
-      name: rightPad(key + ':', length) + ' ' + type.description,
+      name: rightPad(addEmoji(type) + key + ':', length) + ' ' + type.description,
       value: key
     };
   });
